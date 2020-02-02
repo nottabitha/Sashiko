@@ -17,7 +17,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -55,19 +54,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10358}
     - Class: 114
-      Script: {instanceID: 10714}
+      Script: {instanceID: 10716}
     - Class: 114
-      Script: {instanceID: 10812}
+      Script: {instanceID: 10718}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 10816}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 14300}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 15962}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 53130}
+      Script: {instanceID: 11800}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -116,23 +115,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10358}
     - Class: 114
-      Script: {instanceID: 10714}
+      Script: {instanceID: 10716}
     - Class: 114
-      Script: {instanceID: 10770}
+      Script: {instanceID: 10718}
     - Class: 114
-      Script: {instanceID: 10812}
+      Script: {instanceID: 10774}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 10816}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 14300}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 15962}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 36890}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 53130}
+      Script: {instanceID: 11800}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -179,19 +178,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10358}
     - Class: 114
-      Script: {instanceID: 10714}
+      Script: {instanceID: 10462}
     - Class: 114
-      Script: {instanceID: 10812}
+      Script: {instanceID: 10716}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 10816}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 14300}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 53130}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 68790}
+      Script: {instanceID: 11800}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -234,21 +233,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10358}
     - Class: 114
-      Script: {instanceID: 10714}
+      Script: {instanceID: 10716}
     - Class: 114
-      Script: {instanceID: 10812}
+      Script: {instanceID: 10718}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 10816}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11096}
     - Class: 114
-      Script: {instanceID: 14300}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 15882}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 15962}
+      Script: {instanceID: 11746}
     - Class: 114
-      Script: {instanceID: 53130}
+      Script: {instanceID: 11800}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -554,6 +553,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 901b3a6ff8e74ed4b3e6bee88bad9cbc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelButton
+  - hash:
+      serializedVersion: 2
       Hash: 380d3ba99e2d836ad5d66bded133d128
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -638,6 +643,12 @@ ScriptsOnlyBuild:
     className: SceneSwitcher
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayMusic
+  - hash:
+      serializedVersion: 2
       Hash: 694d20920c0e41f567e119f7159a3644
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -710,6 +721,12 @@ ScriptsOnlyBuild:
     className: CinemachineBlendListCamera
   - hash:
       serializedVersion: 2
+      Hash: 06e737eefa8741b444637ff587337fa0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SewPoint
+  - hash:
+      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -750,6 +767,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Music
   - hash:
       serializedVersion: 2
       Hash: df21ffd1864551a3e43410f28754a73e
@@ -804,6 +827,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineImpulseSource
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Exit
   - hash:
       serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
@@ -926,6 +955,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 06cda66a7a034282622a5f8e5ae32155
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonScript
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1014,46 +1049,10 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 06cda66a7a034282622a5f8e5ae32155
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ButtonScript
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Music
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayMusic
-  - hash:
-      serializedVersion: 2
-      Hash: 06e737eefa8741b444637ff587337fa0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SewPoint
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Exit
-  - hash:
-      serializedVersion: 2
-      Hash: 901b3a6ff8e74ed4b3e6bee88bad9cbc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LevelButton
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Levels.unity
   - Assets/Scenes/Level1.unity
   - Assets/Scenes/Credits.unity
-  playerPath: C:/Users/leimo/OneDrive/Sashiko/Sashiko/Sashiko.exe
+  playerPath: C:/Users/leimo/OneDrive/SashikoGame/Sashiko/SashikoActualGame/Sashiko/Sashiko.exe
