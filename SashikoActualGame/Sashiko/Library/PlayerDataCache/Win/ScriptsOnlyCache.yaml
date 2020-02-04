@@ -1055,4 +1055,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Levels.unity
   - Assets/Scenes/Level1.unity
   - Assets/Scenes/Credits.unity
-  playerPath: C:/Users/leimo/OneDrive/SashikoGame/Sashiko/SashikoActualGame/Sashiko/Sashiko.exe
+  playerPath: C:/Users/leimo/OneDrive/SashikoGame/Sashiko/GGJ_directory_structure/GGJ_directory_structure/release/Sashiko.exe

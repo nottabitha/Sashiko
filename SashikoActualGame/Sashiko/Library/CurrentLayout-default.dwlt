@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 37
+  controlID: 58
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 38
+  controlID: 59
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 39
+  controlID: 60
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -309,10 +309,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -381.5
-    m_HBaseRangeMax: 381.5
-    m_VBaseRangeMin: -214.5
-    m_VBaseRangeMax: 214.5
+    m_HBaseRangeMin: -305.2
+    m_HBaseRangeMax: 305.2
+    m_VBaseRangeMin: -171.6
+    m_VBaseRangeMax: 171.6
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 849, y: 446}
+  m_LastWindowPixelSize: {x: 1061.25, y: 557.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -382,9 +382,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 32efffff5eefffff60efffffeeeffffffcefffff16f0ffff00f1ffff2cf1ffff2ef1ffffbcf1ffffcaf1ffffe4f1ffff86f2ffff32f3ffffeaf3ffff24f4ffffa4f4ffffd0f4ffffdcf4ffff6af5ffff6ef5ffff88f5ffff2cf6ffff3af8ffffcaf8fffff6f8fffffcf9ffff90faffffa0faffffa4faffff70fbffffb23900003e3c00005e4100009e410000
+      m_SelectedIDs: 18b5ffff
+      m_LastClickedID: -19176
+      m_ExpandedIDs: d8bdffff92beffff4abfffff04c0ffffbac0ffff70c1ffff28c2ffffdcc2fffff0c3ffff5cc6ffff34c8ffffe8c8ffff98c9ffff48cafffff8caffffa8cbffff58ccffff08cdffffb8cdffff68ceffff18cfffffc8cfffff78d0ffff28d1ffffd8d1ffff8ed2ffff3ed3ffffeed3ffff9ed4ffff4ed5ffff00d6ffff08d7ffff82d8ffff86d9ffff1adbffff24dcffff2addffff2edeffff70dfffffbce7ffff8ce8ffffc4e8fffff2e8ffff20e9ffff4ee9fffffce9ffff70fbfffff4ffffff68570000a25800008a5b0000725e00005a610000426400002a670000126a0000668d00007e8d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -444,9 +444,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.4897668, y: -0.8660755, z: -46.314064}
+    m_Target: {x: 3.3328426, y: -0.42676046, z: -2.2460938}
     speed: 2
-    m_Value: {x: 2.4897668, y: -0.8660755, z: -46.314064}
+    m_Value: {x: 3.3328426, y: -0.42676046, z: -2.2460938}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -479,9 +479,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.1099
+    m_Target: 14.943958
     speed: 2
-    m_Value: 12.54536
+    m_Value: 14.943958
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -572,19 +572,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/credits_screen
+    - Assets/Prefab
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/credits_screen
+  - Assets/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\leimo\OneDrive\SashikoGame\Sashiko\SashikoActualGame\Sashiko
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 53}
-    m_SelectedIDs: ac310000
-    m_LastClickedID: 12716
+    m_SelectedIDs: 282f0000
+    m_LastClickedID: 12072
     m_ExpandedIDs: 00000000962e00001a34000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -657,7 +657,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0

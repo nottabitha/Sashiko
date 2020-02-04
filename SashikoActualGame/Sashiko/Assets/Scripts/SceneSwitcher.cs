@@ -33,6 +33,40 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void GoLevel2Scene()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void GoLevel3Scene()
+    {
+        SceneManager.LoadScene("Level3");
+    }
+
+    public void GoLevel4Scene()
+    {
+        SceneManager.LoadScene("Level4");
+    }
+
+    public void GoLevel5Scene()
+    {
+        SceneManager.LoadScene("Level5");
+    }
+
+    public void GoLevel6Scene()
+    {
+        SceneManager.LoadScene("Level6");
+    }
+
+    public void GoLevel7Scene()
+    {
+        SceneManager.LoadScene("Level7");
+    }
+
+    public void GoLevel8Scene()
+    {
+        SceneManager.LoadScene("Level8");
+    }
     public void GoCreditsScene()
     {
         SceneManager.LoadScene("Credits");
