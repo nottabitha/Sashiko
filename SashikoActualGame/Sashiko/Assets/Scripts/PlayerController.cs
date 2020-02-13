@@ -11,7 +11,9 @@ public class PlayerController : MonoBehaviour
     public GameObject[] inputBorders;
     public GameObject[] inputPoints;
     public bool audioPlay;
-    
+
+    public List<Vector3> positionsList;
+    public GameObject LineRenderer;
 
     private bool sewReady = false;
     private int lineNo;
@@ -124,7 +126,7 @@ public class PlayerController : MonoBehaviour
             PointHighlight(GameObject.Find("SewingPointP"));
             audioPlay = false;
         }
-
+        /*
         if (inputBorders[0].activeSelf && inputBorders[1].activeSelf)
         {
             if (sewReady)
@@ -139,12 +141,16 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        */
     }
 
     void PointHighlight(GameObject point)
     {
-        if (inputBorders[0].transform.position != point.transform.position || inputBorders[1].transform.position != point.transform.position)
+        if (inputBorders[0].transform.position != point.transform.position && inputBorders[1].transform.position != point.transform.position)
         {
+            positionsList.Add(new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z));
+            int lastPosition = positionsList.Count - 1;
+            GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
             audioPlay = true;
             point.GetComponent<SewPoint>().PlaySound();
             sewReady = true;
@@ -161,12 +167,30 @@ public class PlayerController : MonoBehaviour
                 //lastinputBorderNo = 1;
                 inputBorderNo = 0;
             }
+
+            if (inputBorders[0].activeSelf && inputBorders[1].activeSelf)
+            {
+                if (sewReady)
+                {
+                    if (lineVisible)
+                    {
+                        Sew(lastSew);
+                    }
+                    else
+                    {
+                        lineVisible = true;
+                    }
+                }
+            }
+
         }
     }
+        
 
     void Sew(GameObject point)
     {
-        sewReady = false;
+        //sewReady = false;
+        
         for (int i = 0; i < inputBorders.Length; i++)
         {
             lineNo = point.GetComponent<LineRenderer>().positionCount;
