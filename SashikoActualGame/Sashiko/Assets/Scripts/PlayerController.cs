@@ -7,13 +7,14 @@ public class PlayerController : MonoBehaviour
     private bool clicked = false;
     private RaycastHit2D SewPointHit;
     private int inputBorderNo;
-    //private int lastinputBorderNo;
+    private int lastinputBorderNo;
     public GameObject[] inputBorders;
     public GameObject[] inputPoints;
     public bool audioPlay;
 
     public List<Vector3> positionsList;
     public GameObject LineRenderer;
+    private GameObject lastPointCheck;
 
     private bool sewReady = false;
     private int lineNo;
@@ -151,6 +152,7 @@ public class PlayerController : MonoBehaviour
             positionsList.Add(new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z));
             int lastPosition = positionsList.Count - 1;
             GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
+            lastPointCheck = point;
             audioPlay = true;
             point.GetComponent<SewPoint>().PlaySound();
             sewReady = true;
@@ -159,12 +161,12 @@ public class PlayerController : MonoBehaviour
 
             if (inputBorderNo == 0)
             {
-                //lastinputBorderNo = 0;
+                lastinputBorderNo = 0;
                 inputBorderNo = 1;
             }
             else if (inputBorderNo == 1)
             {
-                //lastinputBorderNo = 1;
+                lastinputBorderNo = 1;
                 inputBorderNo = 0;
             }
 
@@ -183,6 +185,48 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
+        }
+
+        else if (inputBorders[0].activeSelf && inputBorders[1].activeSelf)
+        {
+            if (point.transform.position != inputBorders[lastinputBorderNo].transform.position)
+            {
+                Debug.Log(lastinputBorderNo);
+                positionsList.Add(new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z));
+                int lastPosition = positionsList.Count - 1;
+                GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
+                audioPlay = true;
+                point.GetComponent<SewPoint>().PlaySound();
+                sewReady = true;
+                inputBorders[inputBorderNo].SetActive(true);
+                inputBorders[inputBorderNo].transform.position = point.transform.position;
+
+                if (inputBorderNo == 0)
+                {
+                    lastinputBorderNo = 0;
+                    inputBorderNo = 1;
+                }
+                else if (inputBorderNo == 1)
+                {
+                    lastinputBorderNo = 1;
+                    inputBorderNo = 0;
+                }
+
+                if (inputBorders[0].activeSelf && inputBorders[1].activeSelf)
+                {
+                    if (sewReady)
+                    {
+                        if (lineVisible)
+                        {
+                            Sew(lastSew);
+                        }
+                        else
+                        {
+                            lineVisible = true;
+                        }
+                    }
+                }
+            }
         }
     }
         
