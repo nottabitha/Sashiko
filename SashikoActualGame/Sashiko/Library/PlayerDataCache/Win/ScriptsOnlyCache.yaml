@@ -12,8 +12,6 @@ ScriptsOnlyBuild:
     - SewPoint
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -1586,4 +1584,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level6.unity
   - Assets/Scenes/Level7.unity
   - Assets/Scenes/Level8.unity
-  playerPath: C:/Users/leimo/OneDrive/SashikoGame/Sashiko/.git/Sashiko.exe
+  playerPath: C:/Users/leimo/OneDrive/SashikoGame/Sashiko/Build/Sashiko.exe
