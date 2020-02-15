@@ -12,6 +12,8 @@ ScriptsOnlyBuild:
     - SewPoint
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -1063,7 +1065,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 901b3a6ff8e74ed4b3e6bee88bad9cbc
+      Hash: 69e5ceb3839951263d83694cca193e62
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelButton
@@ -1584,4 +1586,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level6.unity
   - Assets/Scenes/Level7.unity
   - Assets/Scenes/Level8.unity
-  playerPath: C:/Users/leimo/OneDrive/SashikoGame/Sashiko/Sashiko.exe
+  playerPath: C:/Users/leimo/OneDrive/SashikoGame/Sashiko/.git/Sashiko.exe

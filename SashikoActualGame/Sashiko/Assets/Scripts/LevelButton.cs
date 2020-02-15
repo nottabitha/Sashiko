@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class LevelButton : MonoBehaviour
+public class LevelButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public AudioSource audio;
-
+    public Sprite hoverSprite;
+    public Sprite normalSprite;
     private Button button;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,16 @@ public class LevelButton : MonoBehaviour
         button.onClick.AddListener(delegate () { audio.Play(); });
     }
 
-   
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        this.GetComponent<Image>().sprite = hoverSprite;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        this.GetComponent<Image>().sprite = normalSprite;
+    }
+
 
 
 }
