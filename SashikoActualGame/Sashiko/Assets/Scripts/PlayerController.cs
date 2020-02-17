@@ -21,11 +21,15 @@ public class PlayerController : MonoBehaviour
     private GameObject lastPoint;
     private bool lineVisible = true;
     private bool hasPlayed = false;
+    private GameObject letters;
     //private GameObject point1;
     //private GameObject point2;
     // Start is called before the first frame update
     void Start()
     {
+        letters = GameObject.Find("Letters");
+        letters.SetActive(false);
+
         inputBorderNo = 0;
     }
 
@@ -126,6 +130,17 @@ public class PlayerController : MonoBehaviour
             lastPoint = GameObject.Find("SewingPointP");
             PointHighlight(GameObject.Find("SewingPointP"));
             audioPlay = false;
+        }
+        else if (Input.GetKeyUp(KeyCode.X))
+        {
+            if (letters.activeSelf == false)
+            {
+                letters.SetActive(true);
+            }
+            else if (letters.activeSelf == true)
+            {
+                letters.SetActive(false);
+            }
         }
         /*
         if (inputBorders[0].activeSelf && inputBorders[1].activeSelf)
