@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -151,6 +152,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -605,7 +607,7 @@ PrefabInstance:
     - target: {fileID: 8741538961188705565, guid: 224fc00068edb904b8732f49b2a74626,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8741538961188705565, guid: 224fc00068edb904b8732f49b2a74626,
         type: 3}
@@ -625,22 +627,22 @@ PrefabInstance:
     - target: {fileID: 8741538961188705565, guid: 224fc00068edb904b8732f49b2a74626,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.16
+      value: -7.89
       objectReference: {fileID: 0}
     - target: {fileID: 8741538961188705565, guid: 224fc00068edb904b8732f49b2a74626,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.52
+      value: 3.6132
       objectReference: {fileID: 0}
     - target: {fileID: 8741538961188705565, guid: 224fc00068edb904b8732f49b2a74626,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 110.6703
       objectReference: {fileID: 0}
     - target: {fileID: 8741538961188705565, guid: 224fc00068edb904b8732f49b2a74626,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 21.0756
       objectReference: {fileID: 0}
     - target: {fileID: 8741538961188705565, guid: 224fc00068edb904b8732f49b2a74626,
         type: 3}
