@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private bool clicked = false;
     private RaycastHit2D SewPointHit;
-    private int inputBorderNo;
+    public int inputBorderNo;
     private int lastinputBorderNo;
     public GameObject[] inputBorders;
     public GameObject[] inputPoints;
@@ -22,11 +22,14 @@ public class PlayerController : MonoBehaviour
     private bool lineVisible = true;
     private bool hasPlayed = false;
     private GameObject letters;
+
+    public List<GameObject> sewPoints;
     //private GameObject point1;
     //private GameObject point2;
     // Start is called before the first frame update
     void Start()
     {
+        sewPoints = new List<GameObject>();
         letters = GameObject.Find("Letters");
         letters.SetActive(false);
 
@@ -167,6 +170,8 @@ public class PlayerController : MonoBehaviour
             positionsList.Add(new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z));
             int lastPosition = positionsList.Count - 1;
             GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
+            sewPoints.Add(lastSew);
+            //Debug.Log(lastSew);
             lastPointCheck = point;
             audioPlay = true;
             point.GetComponent<SewPoint>().PlaySound();
@@ -210,6 +215,8 @@ public class PlayerController : MonoBehaviour
                 positionsList.Add(new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z));
                 int lastPosition = positionsList.Count - 1;
                 GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
+                sewPoints.Add(lastSew);
+                Debug.Log(lastSew);
                 audioPlay = true;
                 point.GetComponent<SewPoint>().PlaySound();
                 sewReady = true;
