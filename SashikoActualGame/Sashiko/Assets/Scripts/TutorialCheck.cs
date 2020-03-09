@@ -19,11 +19,17 @@ public class TutorialCheck : MonoBehaviour
     {
         if (tutorialComplete == false)
         {
-            GameObject.FindGameObjectWithTag("Tutorial").transform.localScale = new Vector3(1, 1, 1);
+            if (GameObject.FindGameObjectWithTag("Tutorial") != null)
+            {
+                GameObject.FindGameObjectWithTag("Tutorial").transform.localScale = new Vector3(1, 1, 1);
+            }
         }
         if (tutorialComplete == true)
         {
-            GameObject.FindGameObjectWithTag("Tutorial").transform.localScale = new Vector3(0, 0, 0);
+            if (GameObject.FindGameObjectWithTag("Tutorial") != null)
+            {
+                GameObject.FindGameObjectWithTag("Tutorial").transform.localScale = new Vector3(0, 0, 0);
+            }
         }
     }
 }

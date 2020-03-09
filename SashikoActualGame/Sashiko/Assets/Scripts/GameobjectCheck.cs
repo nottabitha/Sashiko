@@ -14,7 +14,7 @@ public class GameobjectCheck : MonoBehaviour
             Instantiate(music);
         }
 
-        if (GameObject.FindGameObjectWithTag("Tutorial") == null)
+        if (GameObject.FindGameObjectWithTag("TutorialCheck") == null)
         {
             Instantiate(tutorial);
         }

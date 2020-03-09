@@ -16,7 +16,7 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         button = this.GetComponent<Button>();
         audio = GetComponent<AudioSource>();
-    }
+    }   
 
     // Update is called once per frame
     void Update()

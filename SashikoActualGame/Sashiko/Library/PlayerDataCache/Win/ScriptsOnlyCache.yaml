@@ -1630,4 +1630,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level6.unity
   - Assets/Scenes/Level7.unity
   - Assets/Scenes/Level8.unity
-  playerPath: C:/Users/leimo/OneDrive/SashikoBuilds/Build v1.5/Sashiko.exe
+  playerPath: C:/Users/leimo/OneDrive/SashikoBuilds/Test/Sashiko.exe
