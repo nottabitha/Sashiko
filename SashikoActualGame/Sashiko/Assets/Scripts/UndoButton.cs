@@ -28,6 +28,8 @@ public class UndoButton : MonoBehaviour
                 playerControllerScript.sewPoints.RemoveAt(playerControllerScript.sewPoints.Count - 1);
             }
 
+            playerControllerScript.positionsList.RemoveAt(playerControllerScript.positionsList.Count - 1);
+
             playerControllerScript.inputBorders[0].transform.position = new Vector3(10, 10, 0);
             playerControllerScript.inputBorders[1].transform.position = new Vector3(10, 10, 0);
 

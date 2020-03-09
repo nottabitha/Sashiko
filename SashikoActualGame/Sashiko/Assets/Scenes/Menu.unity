@@ -589,6 +589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5eb8b18f1a306d4f8420f1bd85dc418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialCheck: {fileID: 2744989162664680760, guid: a0d387d120e299e4ea8f220003d8e499,
+    type: 3}
 --- !u!4 &1435009491
 Transform:
   m_ObjectHideFlags: 0
@@ -616,6 +618,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 1942780170808828207, guid: a78e513df2cb96841aa6b64767182876, type: 3}
+  tutorial: {fileID: 2744989162664680743, guid: a0d387d120e299e4ea8f220003d8e499,
+    type: 3}
 --- !u!1 &2039554993
 GameObject:
   m_ObjectHideFlags: 0

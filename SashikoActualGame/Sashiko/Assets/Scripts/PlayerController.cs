@@ -15,11 +15,11 @@ public class PlayerController : MonoBehaviour
     public List<Vector3> positionsList;
     public GameObject LineRenderer;
     private GameObject lastPointCheck;
+    private bool lineVisible = true;
 
     private bool sewReady = false;
     private int lineNo;
     private GameObject lastPoint;
-    private bool lineVisible = true;
     private bool hasPlayed = false;
     private GameObject letters;
 
@@ -161,6 +161,8 @@ public class PlayerController : MonoBehaviour
             }
         }
         */
+
+        
     }
 
     void PointHighlight(GameObject point)
@@ -251,7 +253,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-        
+
 
     void Sew(GameObject point)
     {
@@ -263,7 +265,7 @@ public class PlayerController : MonoBehaviour
             point.GetComponent<LineRenderer>().positionCount++;
             point.GetComponent<LineRenderer>().SetPosition(lineNo, inputBorders[i].transform.position);
             lineNo++;
-            lineVisible = false;
+            lineVisible = false;            
         }
     }
 }

@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
+    private TutorialCheck tutorialCheck;
     // Start is called before the first frame update
     void Start()
     {
-        
+        tutorialCheck = GameObject.Find("TutorialCheck(Clone)").GetComponent<TutorialCheck>();
     }
 
     // Update is called once per frame
@@ -76,4 +77,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }   
+
+    public void CloseTutorial()
+    {
+        tutorialCheck.tutorialComplete = true;
+    }
 }
