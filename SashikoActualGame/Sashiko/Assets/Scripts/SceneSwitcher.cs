@@ -16,7 +16,10 @@ public class SceneSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (SceneManager.GetActiveScene().name == "Menu") 
+        {
+            tutorialCheck.tutorialComplete = false;
+        }
     }
 
     public void GoMenuScene()
