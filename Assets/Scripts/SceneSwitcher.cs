@@ -11,7 +11,10 @@ public class SceneSwitcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        tutorialCheck = GameObject.Find("TutorialCheck(Clone)").GetComponent<TutorialCheck>();
+        if (SceneManager.GetActiveScene().name != "Menu")
+        {
+            tutorialCheck = GameObject.Find("TutorialCheck(Clone)").GetComponent<TutorialCheck>();
+        }
     }
 
     public void GoMenuScene()
