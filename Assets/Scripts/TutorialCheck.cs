@@ -5,13 +5,9 @@ using UnityEngine;
 public class TutorialCheck : MonoBehaviour
 {
     public bool tutorialComplete;
-
-    private bool isTutorialNotNull;
-
     // Start is called before the first frame update
     void Start()
     {
-        isTutorialNotNull = GameObject.FindGameObjectWithTag("Tutorial") != null;
         DontDestroyOnLoad(transform.gameObject);
 
         tutorialComplete = false;
@@ -21,14 +17,19 @@ public class TutorialCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (tutorialComplete)
+        if (tutorialComplete == false)
         {
-            case false when isTutorialNotNull:
+            if (GameObject.FindGameObjectWithTag("Tutorial") != null)
+            {
                 GameObject.FindGameObjectWithTag("Tutorial").transform.localScale = new Vector3(1, 1, 1);
-                break;
-            case true when isTutorialNotNull:
+            }
+        }
+        if (tutorialComplete == true)
+        {
+            if (GameObject.FindGameObjectWithTag("Tutorial") != null)
+            {
                 GameObject.FindGameObjectWithTag("Tutorial").transform.localScale = new Vector3(0, 0, 0);
-                break;
+            }
         }
     }
 }
