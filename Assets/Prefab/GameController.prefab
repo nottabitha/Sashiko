@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1751615719619379808}
   - component: {fileID: 1751615719619379809}
   - component: {fileID: 1183615779}
-  - component: {fileID: 2619926548978228208}
+  - component: {fileID: -352537137991248718}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -26,12 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751615719619379810}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.279594, y: -0.5350616, z: -430.37213}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1751615719619379809
 MonoBehaviour:
@@ -57,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b323778e89d882429a54f48cf7bb218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputBorderNo: 0
   inputBorders:
   - {fileID: 0}
   - {fileID: 0}
@@ -81,7 +83,8 @@ MonoBehaviour:
   positionsList: []
   LineRenderer: {fileID: 4533176926470454130, guid: ec759cbf729c4f14b97c9873db0dc526,
     type: 3}
---- !u!114 &2619926548978228208
+  sewPoints: []
+--- !u!114 &-352537137991248718
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,6 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1751615719619379810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06dc6c18279de324487acd788737bfd2, type: 3}
+  m_Script: {fileID: 11500000, guid: f0de1342fc3584246bddb46889a6d186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 300
