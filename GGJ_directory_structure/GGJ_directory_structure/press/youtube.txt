@@ -1,2 +1,0 @@
-* Include a video gameplay URL of your game to Youtube or Vimeo in this file *
-* Suggestion to capture short gameplay videos: http://screenr.com *
