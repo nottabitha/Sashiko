@@ -4219,7 +4219,7 @@ PrefabInstance:
         type: 3}
       propertyPath: winStateBorder
       value: 
-      objectReference: {fileID: 226329457}
+      objectReference: {fileID: 4060128}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
