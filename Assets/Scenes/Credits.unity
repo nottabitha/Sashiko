@@ -630,7 +630,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audio
       value: 
-      objectReference: {fileID: 8741538961648281079}
+      objectReference: {fileID: 8300000, guid: d1622c66a3c4f01439d60ccca5d7f91f, type: 3}
     - target: {fileID: 8741538961188705562, guid: 224fc00068edb904b8732f49b2a74626,
         type: 3}
       propertyPath: hoverSprite
@@ -768,12 +768,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 224fc00068edb904b8732f49b2a74626, type: 3}
---- !u!82 &8741538961648281079 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6376488293981909113, guid: 224fc00068edb904b8732f49b2a74626,
-    type: 3}
-  m_PrefabInstance: {fileID: 8741538961648281078}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
