@@ -3,7 +3,7 @@ using UnityEngine;
 public class ResetTimer : MonoBehaviour
 {
     private SceneSwitcher sceneSwitcher;
-    [SerializeField] private float timer = 300;
+    [SerializeField] private float timer = 90;
     private void Awake()
     {
         sceneSwitcher = GameObject.Find("GameController").GetComponent<SceneSwitcher>();
@@ -18,7 +18,7 @@ public class ResetTimer : MonoBehaviour
 
         if (Input.anyKey || isMouseMoved)
         {
-            timer = 300;
+            timer = 90;
         }
 
         if (timer <= 0)
