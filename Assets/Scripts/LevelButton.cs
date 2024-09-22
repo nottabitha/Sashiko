@@ -6,21 +6,28 @@ using UnityEngine.UI;
 
 public class LevelButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public AudioSource audio;
+    public AudioClip audio;
     public Sprite hoverSprite;
     public Sprite normalSprite;
+    
     private Button button;
+    private AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
-        button = this.GetComponent<Button>();
-        audio = GetComponent<AudioSource>();
+        audioManager = FindObjectOfType<AudioManager>();
+        button = GetComponent<Button>();
+        
+        if (audioManager != null)
+        {
+            button.onClick.AddListener(OnButtonPress);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnButtonPress()
     {
-        button.onClick.AddListener(delegate () { audio.Play(); });
+        audioManager.PlaySound(audio);
+        Debug.Log("button pressed");
     }
 
     public void OnPointerEnter(PointerEventData eventData)

@@ -8,31 +8,34 @@ public class ButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 {
     public Sprite hoverSprite;
     public Sprite normalSprite;
-    public AudioSource audio;
+    public AudioClip audio;
 
     private Button button;
+    private AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
-        button = this.GetComponent<Button>();
-        audio = GetComponent<AudioSource>();
-    }   
-
-    // Update is called once per frame
-    void Update()
-    {
-        button.onClick.AddListener(delegate () { audio.Play(); });
+        audioManager = FindObjectOfType<AudioManager>();
+        button = GetComponent<Button>();
+        
+        if (audioManager != null)
+        {
+            button.onClick.AddListener(OnButtonPress);
+        }
     }
 
+    private void OnButtonPress()
+    {
+        audioManager.PlaySound(audio);
+        Debug.Log("button pressed");
+    }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        this.GetComponent<Image>().sprite = hoverSprite;
+        GetComponent<Image>().sprite = hoverSprite;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        this.GetComponent<Image>().sprite = normalSprite;
+        GetComponent<Image>().sprite = normalSprite;
     }
-
-
 }
