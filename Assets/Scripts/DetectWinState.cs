@@ -23,7 +23,6 @@ public class DetectWinState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        WinCheck();
     }
 
     void WinCheck()

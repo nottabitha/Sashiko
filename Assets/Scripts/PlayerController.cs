@@ -11,17 +11,20 @@ public class PlayerController : MonoBehaviour
     public GameObject[] inputBorders;
     public GameObject[] inputPoints;
     public bool audioPlay;
+    public List<Vector3> winPositionList;
+    public AudioClip audio;
 
     public List<Vector3> positionsList;
     public GameObject LineRenderer;
     private GameObject lastPointCheck;
     private bool lineVisible = true;
-
     private bool sewReady = false;
     private int lineNo;
     private GameObject lastPoint;
     private bool hasPlayed = false;
     private GameObject letters;
+    private AudioManager audioManager;
+    private bool levelCompleted = false;
 
     public List<GameObject> sewPoints;
     //private GameObject point1;
@@ -29,6 +32,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+        
         sewPoints = new List<GameObject>();
         letters = GameObject.Find("Letters");
         letters.SetActive(false);
@@ -53,6 +58,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckWinCondition(winPositionList);
+            
         if (Input.GetKeyUp(KeyCode.A))
         {
             lastPoint = GameObject.Find("SewingPointA");
@@ -167,9 +174,13 @@ public class PlayerController : MonoBehaviour
 
     void PointHighlight(GameObject point)
     {
-        if (inputBorders[0].transform.position != point.transform.position && inputBorders[1].transform.position != point.transform.position)
+        Vector3 newPointPosition = point.transform.position;
+        Vector3 lastPositionOne = inputBorders[0].transform.position;
+        Vector3 lastPositionTwo = inputBorders[1].transform.position;
+
+        if ((lastPositionOne != newPointPosition) && (lastPositionTwo != newPointPosition))
         {
-            positionsList.Add(new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z));
+            positionsList.Add(new Vector3(newPointPosition.x, newPointPosition.y, newPointPosition.z));
             int lastPosition = positionsList.Count - 1;
             GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
             sewPoints.Add(lastSew);
@@ -179,7 +190,7 @@ public class PlayerController : MonoBehaviour
             point.GetComponent<SewPoint>().PlaySound();
             sewReady = true;
             inputBorders[inputBorderNo].SetActive(true);
-            inputBorders[inputBorderNo].transform.position = point.transform.position;
+            inputBorders[inputBorderNo].transform.position = newPointPosition;
 
             if (inputBorderNo == 0)
             {
@@ -211,10 +222,10 @@ public class PlayerController : MonoBehaviour
 
         else if (inputBorders[0].activeSelf && inputBorders[1].activeSelf)
         {
-            if (point.transform.position != inputBorders[lastinputBorderNo].transform.position)
+            if (newPointPosition != inputBorders[lastinputBorderNo].transform.position)
             {
                 Debug.Log(lastinputBorderNo);
-                positionsList.Add(new Vector3(point.transform.position.x, point.transform.position.y, point.transform.position.z));
+                positionsList.Add(new Vector3(newPointPosition.x, newPointPosition.y, newPointPosition.z));
                 int lastPosition = positionsList.Count - 1;
                 GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
                 sewPoints.Add(lastSew);
@@ -223,7 +234,7 @@ public class PlayerController : MonoBehaviour
                 point.GetComponent<SewPoint>().PlaySound();
                 sewReady = true;
                 inputBorders[inputBorderNo].SetActive(true);
-                inputBorders[inputBorderNo].transform.position = point.transform.position;
+                inputBorders[inputBorderNo].transform.position = newPointPosition;
 
                 if (inputBorderNo == 0)
                 {
@@ -266,6 +277,27 @@ public class PlayerController : MonoBehaviour
             point.GetComponent<LineRenderer>().SetPosition(lineNo, inputBorders[i].transform.position);
             lineNo++;
             lineVisible = false;            
+        }
+    }
+
+    public void CheckWinCondition(List<Vector3> winPattern)
+    {
+        if (!levelCompleted)
+        {
+            if (winPattern.Count != positionsList.Count)
+            {
+                return;
+            }
+        
+            foreach (var segment in winPattern)
+            {
+                if (!positionsList.Contains(segment))
+                {
+                    return;
+                }
+            }
+            levelCompleted = true;
+            audioManager.PlaySound(audio);
         }
     }
 }

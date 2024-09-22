@@ -80,6 +80,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   audioPlay: 0
+  winPositionList: []
+  audio: {fileID: 8300000, guid: 7f7a2517d3783fc4da0b31ee43c70461, type: 3}
   positionsList: []
   LineRenderer: {fileID: 4533176926470454130, guid: ec759cbf729c4f14b97c9873db0dc526,
     type: 3}
