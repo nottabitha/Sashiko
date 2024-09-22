@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1751615719619379809}
   - component: {fileID: 1183615779}
   - component: {fileID: -352537137991248718}
+  - component: {fileID: 4879019991309081030}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -99,3 +100,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 90
+--- !u!114 &4879019991309081030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751615719619379810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3fc20985afc0f48b65fd97de28f66f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelCompleted: 0
+  winStateBorder: {fileID: 0}

@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private GameObject letters;
     private AudioManager audioManager;
     private bool levelCompleted = false;
+    private DetectWinState detectWinState;
 
     public List<GameObject> sewPoints;
     //private GameObject point1;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
+        detectWinState = FindObjectOfType<DetectWinState>();
         
         sewPoints = new List<GameObject>();
         letters = GameObject.Find("Letters");
@@ -296,7 +298,10 @@ public class PlayerController : MonoBehaviour
                     return;
                 }
             }
+            
             levelCompleted = true;
+            detectWinState.levelCompleted = true;
+            detectWinState.WinCheck();
             audioManager.PlaySound(audio);
         }
     }

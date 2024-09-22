@@ -1,32 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DetectWinState : MonoBehaviour
 {
-    private string sceneName;
-    private Scene currentScene;
-    private List<Vector3> positionList;
-
-    public PlayerController playerControllerScript;
+    public bool levelCompleted = false;
+    public GameObject winStateBorder; 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("test");
-        //
-        currentScene = SceneManager.GetActiveScene();
-        sceneName = currentScene.name;
-        positionList = playerControllerScript.positionsList;
+        winStateBorder.SetActive(false);
     }
 
     // Update is called once per frame
-    void Update()
+    public void WinCheck()
     {
-    }
-
-    void WinCheck()
-    {
-        
+        winStateBorder.SetActive(true);
     }
 }
