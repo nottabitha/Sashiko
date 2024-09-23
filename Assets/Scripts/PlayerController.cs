@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private bool clicked = false;
     private RaycastHit2D SewPointHit;
     public int inputBorderNo;
-    private int lastinputBorderNo;
+    public int lastinputBorderNo;
     public GameObject[] inputBorders;
     public GameObject[] inputPoints;
     public bool audioPlay;
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public List<Vector3> positionsList;
     public GameObject LineRenderer;
     private GameObject lastPointCheck;
-    private bool lineVisible = true;
+    public bool lineVisible = true;
     private bool sewReady = false;
     private int lineNo;
     private GameObject lastPoint;
@@ -186,7 +186,6 @@ public class PlayerController : MonoBehaviour
             int lastPosition = positionsList.Count - 1;
             GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
             sewPoints.Add(lastSew);
-            //Debug.Log(lastSew);
             lastPointCheck = point;
             audioPlay = true;
             point.GetComponent<SewPoint>().PlaySound();
@@ -231,7 +230,6 @@ public class PlayerController : MonoBehaviour
                 int lastPosition = positionsList.Count - 1;
                 GameObject lastSew = Instantiate(LineRenderer, new Vector3(positionsList[lastPosition].x, positionsList[lastPosition].y, positionsList[lastPosition].z), Quaternion.identity);
                 sewPoints.Add(lastSew);
-                Debug.Log(lastSew);
                 audioPlay = true;
                 point.GetComponent<SewPoint>().PlaySound();
                 sewReady = true;
