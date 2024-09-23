@@ -288,11 +288,14 @@ public class PlayerController : MonoBehaviour
             {
                 return;
             }
+            
+            List<Vector3> positionsCopy = new List<Vector3>(positionsList);
         
             foreach (var segment in winPattern)
             {
-                if (!positionsList.Contains(segment))
+                if (!positionsCopy.Remove(segment))
                 {
+                    Debug.Log("does not contain all segments");
                     return;
                 }
             }
